@@ -72,10 +72,10 @@ namespace EthereumStart.Services
                 return null;
         }
 
-        public async Task<decimal> GetBallance(string address)
+        public async Task<decimal> GetBalance(string address)
         {
-            var ballance = await _web3.Eth.GetBalance.SendRequestAsync(address);
-            return _web3.Convert.FromWei(ballance.Value, 18);
+            var balance = await _web3.Eth.GetBalance.SendRequestAsync(address);
+            return _web3.Convert.FromWei(balance.Value, 18);
         }
 
         public async Task<bool> ReleaseContract(string name, string abi, string byteCode, int gas)
